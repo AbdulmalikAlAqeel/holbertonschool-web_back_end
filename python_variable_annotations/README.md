@@ -74,3 +74,9 @@ Write a type-annotated function `make_multiplier` that takes a `float` `multipli
 
 - **File:** `8-make_multiplier.py`
 - **Testing:** Execute `./8-main.py`
+
+### 9. Let's duck type an iterable object
+Annotate the function parameters and return values of `element_length` with the appropriate types using `Iterable`, `Sequence`, `List`, and `Tuple`.
+
+- **File:** `9-element_length.py`
+- **Testing:** Execute `./9-main.py`
