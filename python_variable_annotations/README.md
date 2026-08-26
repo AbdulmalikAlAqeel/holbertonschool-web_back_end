@@ -68,3 +68,9 @@ Write a type-annotated function `to_kv` that takes a string `k` and an `int` OR 
 
 - **File:** `7-to_kv.py`
 - **Testing:** Execute `./7-main.py`
+
+### 8. Complex types - functions
+Write a type-annotated function `make_multiplier` that takes a `float` `multiplier` as argument and returns a function that multiplies a `float` by `multiplier`.
+
+- **File:** `8-make_multiplier.py`
+- **Testing:** Execute `./8-main.py`
