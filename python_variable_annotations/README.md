@@ -44,3 +44,9 @@ Write a type-annotated function `to_str` that takes a `float` `n` as argument an
 
 - **File:** `3-to_str.py`
 - **Testing:** Execute `./3-main.py`
+
+### 4. Define variables
+Define and annotate the variables `a`, `pi`, `i_understand_annotations`, and `school` with their specified initial values.
+
+- **File:** `4-define_variables.py`
+- **Testing:** Execute `./4-main.py`
