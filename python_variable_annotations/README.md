@@ -38,3 +38,9 @@ Write a type-annotated function `floor` which takes a `float` `n` as argument an
 
 - **File:** `2-floor.py`
 - **Testing:** Execute `./2-main.py`
+
+### 3. Basic annotations - to string
+Write a type-annotated function `to_str` that takes a `float` `n` as argument and returns the string representation of the float.
+
+- **File:** `3-to_str.py`
+- **Testing:** Execute `./3-main.py`
