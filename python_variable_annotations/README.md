@@ -26,3 +26,9 @@ Write a type-annotated function `add` that takes a `float` `a` and a `float` `b`
 
 - **File:** `0-add.py`
 - **Testing:** Execute `./0-main.py`
+
+### 1. Basic annotations - concat
+Write a type-annotated function `concat` that takes a string `str1` and a string `str2` as arguments and returns a concatenated string.
+
+- **File:** `1-concat.py`
+- **Testing:** Execute `./1-main.py`
