@@ -50,3 +50,9 @@ Define and annotate the variables `a`, `pi`, `i_understand_annotations`, and `sc
 
 - **File:** `4-define_variables.py`
 - **Testing:** Execute `./4-main.py`
+
+### 5. Complex types - list of floats
+Write a type-annotated function `sum_list` which takes a list `input_list` of floats as argument and returns their sum as a float.
+
+- **File:** `5-sum_list.py`
+- **Testing:** Execute `./5-main.py`
