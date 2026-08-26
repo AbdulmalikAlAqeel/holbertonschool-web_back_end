@@ -32,3 +32,9 @@ Write a type-annotated function `concat` that takes a string `str1` and a string
 
 - **File:** `1-concat.py`
 - **Testing:** Execute `./1-main.py`
+
+### 2. Basic annotations - floor
+Write a type-annotated function `floor` which takes a `float` `n` as argument and returns the floor of the float.
+
+- **File:** `2-floor.py`
+- **Testing:** Execute `./2-main.py`
