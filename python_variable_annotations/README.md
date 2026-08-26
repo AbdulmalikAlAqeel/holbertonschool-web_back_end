@@ -56,3 +56,9 @@ Write a type-annotated function `sum_list` which takes a list `input_list` of fl
 
 - **File:** `5-sum_list.py`
 - **Testing:** Execute `./5-main.py`
+
+### 6. Complex types - mixed list
+Write a type-annotated function `sum_mixed_list` which takes a list `mxd_lst` of integers and floats and returns their sum as a float.
+
+- **File:** `6-sum_mixed_list.py`
+- **Testing:** Execute `./6-main.py`
