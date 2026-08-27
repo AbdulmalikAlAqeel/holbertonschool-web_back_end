@@ -43,3 +43,27 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 print(asyncio.run(wait_random()))
 print(asyncio.run(wait_random(5)))
 print(asyncio.run(wait_random(15)))
+
+---
+
+### 1. Let's execute multiple coroutines at the same time with async
+
+Import `wait_random` from `0-basic_async_syntax.py` and write an async routine called `wait_n` that takes in 2 `int` arguments: `n` and `max_delay`. You will spawn `wait_random` `n` times with the specified `max_delay`.
+
+`wait_n` should return the list of all the delays (float values) in ascending order without using `sort()` because of concurrency.
+
+- **File:** `1-concurrent_coroutines.py`
+- **Execution:** `./1-main.py`
+
+#### Usage Example
+
+```python
+#!/usr/bin/env python3
+
+import asyncio
+
+wait_n = __import__('1-concurrent_coroutines').wait_n
+
+print(asyncio.run(wait_n(5, 5)))
+print(asyncio.run(wait_n(10, 7)))
+print(asyncio.run(wait_n(10, 0)))
