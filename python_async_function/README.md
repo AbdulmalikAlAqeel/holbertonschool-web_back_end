@@ -113,3 +113,25 @@ async def test(max_delay: int) -> float:
     print(task.__class__)
 
 asyncio.run(test(5))
+
+---
+
+### 4. Tasks
+
+Take the code from `wait_n` and alter it into a new function `task_wait_n`. The code is nearly identical to `wait_n` except `task_wait_random` is being called.
+
+- **File:** `4-tasks.py`
+- **Execution:** `./4-main.py`
+
+#### Usage Example
+
+```python
+#!/usr/bin/env python3
+
+import asyncio
+
+task_wait_n = __import__('4-tasks').task_wait_n
+
+n = 5
+max_delay = 6
+print(asyncio.run(task_wait_n(n, max_delay)))
