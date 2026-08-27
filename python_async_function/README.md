@@ -67,3 +67,24 @@ wait_n = __import__('1-concurrent_coroutines').wait_n
 print(asyncio.run(wait_n(5, 5)))
 print(asyncio.run(wait_n(10, 7)))
 print(asyncio.run(wait_n(10, 0)))
+
+---
+
+### 2. Measure the runtime
+
+From the previous file, import `wait_n` into `2-measure_runtime.py`. Create a `measure_time` function with integers `n` and `max_delay` as arguments that measures the total execution time for `wait_n(n, max_delay)`, and returns `total_time / n`. Your function should return a float.
+
+- **File:** `2-measure_runtime.py`
+- **Execution:** `./2-main.py`
+
+#### Usage Example
+
+```python
+#!/usr/bin/env python3
+
+measure_time = __import__('2-measure_runtime').measure_time
+
+n = 5
+max_delay = 9
+
+print(measure_time(n, max_delay))
