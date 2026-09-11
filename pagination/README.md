@@ -51,3 +51,8 @@ $ ./0-main.py
 ### 2. Hypermedia pagination
 * **File:** `2-hypermedia_pagination.py`
 * **Description:** Implement a `get_hyper` method that returns a dictionary containing pagination metadata: `page_size`, `page`, `data`, `next_page`, `prev_page`, and `total_pages`. Reuses `get_page` and uses `math.ceil` for total pages calculation.
+
+
+### 3. Deletion-resilient hypermedia pagination
+* **File:** `3-hypermedia_del_pagination.py`
+* **Description:** Implement a `get_hyper_index` method that returns a dictionary with `index`, `next_index`, `page_size`, and `data`. Uses `indexed_dataset` to ensure that if items are deleted between queries, the user will not miss any rows when navigating with `next_index`.
