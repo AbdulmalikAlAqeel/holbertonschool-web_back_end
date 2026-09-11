@@ -46,3 +46,8 @@ $ ./0-main.py
 ### 1. Simple pagination
 * **File:** `1-simple_pagination.py`
 * **Description:** Implement a method named `get_page` in `Server` class that takes integer arguments `page` (default 1) and `page_size` (default 10). Uses `assert` to verify integer values > 0 and `index_range` to return the appropriate list slice. Returns an empty list if out of range.
+
+
+### 2. Hypermedia pagination
+* **File:** `2-hypermedia_pagination.py`
+* **Description:** Implement a `get_hyper` method that returns a dictionary containing pagination metadata: `page_size`, `page`, `data`, `next_page`, `prev_page`, and `total_pages`. Reuses `get_page` and uses `math.ceil` for total pages calculation.
