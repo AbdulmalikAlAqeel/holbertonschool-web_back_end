@@ -41,3 +41,8 @@ $ ./0-main.py
 (0, 7)
 <class 'tuple'>
 (30, 45)
+
+
+### 1. Simple pagination
+* **File:** `1-simple_pagination.py`
+* **Description:** Implement a method named `get_page` in `Server` class that takes integer arguments `page` (default 1) and `page_size` (default 10). Uses `assert` to verify integer values > 0 and `index_range` to return the appropriate list slice. Returns an empty list if out of range.
