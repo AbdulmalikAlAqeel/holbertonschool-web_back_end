@@ -68,3 +68,12 @@ cat 4-match | mongo my_db
 #### Usage
 ```bash
 cat 5-count | mongo my_db
+
+
+### 6. Update
+* **File:** `6-update`
+* **Description:** Write a MongoDB script that adds an attribute `address` with the value `"972 Mission street"` to all documents with `name="Holberton school"` in the collection `school`.
+
+#### Usage
+```bash
+cat 6-update | mongo my_db
