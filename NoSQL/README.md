@@ -106,3 +106,13 @@ cat 7-delete | mongo my_db
 #### Usage
 ```bash
 ./9-main.py
+
+
+### 10. Change school topics
+* **File:** `10-update_topics.py`
+* **Prototype:** `def update_topics(mongo_collection, name, topics):`
+* **Description:** Write a Python function that changes all topics of a school document based on the name using `pymongo`.
+
+#### Usage
+```bash
+./10-main.py
