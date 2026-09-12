@@ -77,3 +77,12 @@ cat 5-count | mongo my_db
 #### Usage
 ```bash
 cat 6-update | mongo my_db
+
+
+### 7. Delete by match
+* **File:** `7-delete`
+* **Description:** Write a MongoDB script that deletes all documents with `name="Holberton school"` in the collection `school`.
+
+#### Usage
+```bash
+cat 7-delete | mongo my_db
