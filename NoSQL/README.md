@@ -86,3 +86,23 @@ cat 6-update | mongo my_db
 #### Usage
 ```bash
 cat 7-delete | mongo my_db
+
+
+### 8. List all documents in Python
+* **File:** `8-all.py`
+* **Prototype:** `def list_all(mongo_collection):`
+* **Description:** Write a Python function that lists all documents in a collection using `pymongo`. Returns an empty list if no document is in the collection.
+
+#### Usage
+```bash
+./8-main.py
+
+
+### 9. Insert a document in Python
+* **File:** `9-insert_school.py`
+* **Prototype:** `def insert_school(mongo_collection, **kwargs):`
+* **Description:** Write a Python function that inserts a new document in a collection based on `kwargs` using `pymongo`. Returns the new `_id`.
+
+#### Usage
+```bash
+./9-main.py
