@@ -32,3 +32,12 @@ show dbs
 #### Usage
 ```bash
 cat 1-use_or_create_database | mongo
+
+
+### 2. Insert document
+* **File:** `2-insert`
+* **Description:** Write a MongoDB script that inserts a document with attribute `name="Holberton school"` into the collection `school`. The database name is passed via the `mongo` command argument.
+
+#### Usage
+```bash
+cat 2-insert | mongo my_db
