@@ -59,3 +59,12 @@ cat 3-all | mongo my_db
 #### Usage
 ```bash
 cat 4-match | mongo my_db
+
+
+### 5. Count
+* **File:** `5-count`
+* **Description:** Write a MongoDB script that displays the number of documents in the collection `school`. The database name is passed as an option of the `mongo` command.
+
+#### Usage
+```bash
+cat 5-count | mongo my_db
