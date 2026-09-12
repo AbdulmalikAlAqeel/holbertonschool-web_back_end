@@ -50,3 +50,12 @@ cat 2-insert | mongo my_db
 #### Usage
 ```bash
 cat 3-all | mongo my_db
+
+
+### 4. All matches
+* **File:** `4-match`
+* **Description:** Write a MongoDB script that lists all documents with `name="Holberton school"` in the collection `school`. The database name is passed as an option of the `mongo` command.
+
+#### Usage
+```bash
+cat 4-match | mongo my_db
