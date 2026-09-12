@@ -41,3 +41,12 @@ cat 1-use_or_create_database | mongo
 #### Usage
 ```bash
 cat 2-insert | mongo my_db
+
+
+### 3. All documents
+* **File:** `3-all`
+* **Description:** Write a MongoDB script that lists all documents in the collection `school`. The database name is passed as an option of the `mongo` command.
+
+#### Usage
+```bash
+cat 3-all | mongo my_db
