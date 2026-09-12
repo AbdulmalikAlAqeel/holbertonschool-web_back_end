@@ -23,3 +23,12 @@ This project covers NoSQL databases, specifically focusing on MongoDB. It introd
 ```javascript
 // Script that lists all databases in MongoDB
 show dbs
+
+
+### 1. Create a database
+* **File:** `1-use_or_create_database`
+* **Description:** Write a MongoDB script that creates or switches to the database `my_db`.
+
+#### Usage
+```bash
+cat 1-use_or_create_database | mongo
