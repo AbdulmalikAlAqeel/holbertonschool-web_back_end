@@ -126,3 +126,12 @@ cat 7-delete | mongo my_db
 #### Usage
 ```bash
 ./11-main.py
+
+
+### 12. Log stats
+* **File:** `12-log_stats.py`
+* **Description:** Write a Python script that provides stats about Nginx logs stored in MongoDB (total logs, methods counts, and GET `/status` count).
+
+#### Usage
+```bash
+./12-log_stats.py
