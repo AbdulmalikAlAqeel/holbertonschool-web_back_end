@@ -116,3 +116,13 @@ cat 7-delete | mongo my_db
 #### Usage
 ```bash
 ./10-main.py
+
+
+### 11. Where can I learn Python?
+* **File:** `11-schools_by_topic.py`
+* **Prototype:** `def schools_by_topic(mongo_collection, topic):`
+* **Description:** Write a Python function that returns the list of school having a specific topic using `pymongo`.
+
+#### Usage
+```bash
+./11-main.py
