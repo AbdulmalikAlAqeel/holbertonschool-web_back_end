@@ -26,3 +26,11 @@ The goal of Task 0 is to refactor legacy JavaScript functions to strictly use mo
 1. **Install Dependencies:**
    ```bash
    npm install
+
+
+---
+
+
+### Task 1: Block Scope
+* **File:** `1-block-scoped.js`
+* **Objective:** Prevent variable overwriting caused by `var` function-scoping and hoisting. Refactored inside the conditional `if` block using block-scoped `const` declarations (with ESLint inline rules to handle unused variable warnings) so the outer variables retain their original values.
