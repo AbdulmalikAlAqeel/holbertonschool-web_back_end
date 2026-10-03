@@ -268,3 +268,70 @@ curl localhost:1245/students && echo ""
 # Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 # Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 ```
+
+---
+
+### 8. Organize a complex HTTP server using Express
+
+**Directory:** `full_server/`  
+**Description:** Refactors the Express HTTP server into a scalable Model-View-Controller (MVC) modular architecture using ES6 syntaxes (`import`/`export`) compiled via `babel-node`.
+
+#### Folder Structure
+```text
+full_server/
+├── controllers/
+│   ├── AppController.js       # Handles root endpoint routing
+│   └── StudentsController.js   # Handles student data queries and filtering
+├── routes/
+│   └── index.js              # Maps Express routes to Controllers
+├── utils.js                  # Helper module for asynchronous file reading
+└── server.js                 # Server initialization and export
+```
+
+## Requirements
+
+** full_server/utils.js: Export readDatabase(filePath) returning a Promise that resolves to an object mapping fields (e.g., CS, SWE) to arrays of student firstnames.
+
+** full_server/controllers/AppController.js:
+
+** static getHomepage(request, response): Returns 200 with Hello Holberton School!.
+
+** full_server/controllers/StudentsController.js:
+
+** static getAllStudents(request, response): Returns 200 with total students and student lists grouped alphabetically by field. Returns 500 with Cannot load the database on error.
+
+** static getAllStudentsByMajor(request, response): Validates :major parameter (CS or SWE). Returns 200 with student list or 500 with Major parameter must be CS or SWE if invalid.
+
+** full_server/routes/index.js: Binds routes (/, /students, /students/:major) to their respective controller methods using Express Router.
+
+** full_server/server.js: Express instance listening on port 1245 with export default app;.
+
+### Usage & Testing Example
+
+In Terminal 1 (Start the server via npm dev script):
+
+```bash
+npm run dev
+```
+In Terminal 2 (Test endpoints via curl):
+
+```bash
+# Test root homepage
+curl localhost:1245 && echo ""
+# Output: Hello Holberton School!
+
+# Test all students
+curl localhost:1245/students && echo ""
+# Output:
+# This is the list of our students
+# Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
+# Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
+
+# Test valid major filter
+curl localhost:1245/students/SWE && echo ""
+# Output: List: Guillaume, Joseph, Paul, Tommy
+
+# Test invalid major parameter
+curl localhost:1245/students/French -vvv && echo ""
+# Output HTTP 500: Major parameter must be CS or SWE
+```
