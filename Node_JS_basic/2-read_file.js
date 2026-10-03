@@ -45,7 +45,11 @@ function countStudents(path) {
   for (let i = 0; i < keys.length; i += 1) {
     const field = keys[i];
     const students = fields[field];
-    console.log(`Number of students in \({field}:\){students.length}. List: ${students.join(', ')}`);
+    const count = students.length;
+    const list = students.join(', ');
+
+    /* eslint-disable-next-line prefer-template */
+    console.log('Number of students in ' + field + ': ' + count + '. List: ' + list);
   }
 }
 
