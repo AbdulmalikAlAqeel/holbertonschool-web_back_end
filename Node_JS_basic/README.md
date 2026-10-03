@@ -100,3 +100,34 @@ Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaum
 Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 bob@dylan:~$
 ```
+
+---
+
+### 3. Reading a file asynchronously with Node JS
+
+**File:** `3-read_file_async.js`  
+**Description:** Executes non-blocking asynchronous file reading using Node.js callbacks wrapped inside a Native JavaScript `Promise`.
+
+#### Requirements
+- Create a function named `countStudents(path)`.
+- The function must return a `Promise`.
+- It reads the CSV file asynchronously using `fs.readFile`.
+- If the file cannot be accessed or loaded, it rejects the Promise with an error containing the message: `Cannot load the database`.
+- Logs the total number of valid students and groups them by their field (`CS`, `SWE`, etc.) in the exact required format.
+- Non-blocking execution must allow subsequent synchronous code to execute first.
+
+#### Usage Example
+
+```javascript
+const countStudents = require('./3-read_file_async');
+
+countStudents("database.csv")
+    .then(() => {
+        console.log("Done!");
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+
+console.log("After!");
+```
