@@ -231,3 +231,40 @@ curl localhost:1245 && echo ""
 curl localhost:1245/any_endpoint && echo ""
 # Output: <!DOCTYPE html>...<pre>Cannot GET /any_endpoint</pre>...
 ```
+
+---
+
+### 5. Create a more complex HTTP server using Node's HTTP module
+
+**File:** `5-http.js`  
+**Description:** Extends the native Node.js HTTP server to handle specific route filtering (`/` and `/students`) and integrate asynchronous file system reading via Promises for database queries.
+
+#### Requirements
+- Import the native `http` and `fs` modules.
+- Create an HTTP server assigned to the `app` variable and listen on port `1245`.
+- Export `app` using `module.exports = app;`.
+- Accept the database CSV file path as a command-line argument (`process.argv[2]`).
+- Routes handling:
+  - `/`: Returns `Hello Holberton School!` as plain text.
+  - `/students`: Returns `This is the list of our students` followed by the processed student data generated asynchronously. If file reading fails, it returns `This is the list of our students` followed by `Cannot load the database`.
+
+#### Usage & Testing Example
+
+In **Terminal 1** (Start the server with database argument):
+```bash
+node 5-http.js database.csv
+```
+
+In Terminal 2 (Test endpoints via curl):
+
+bash```
+curl localhost:1245 && echo ""
+# Output: Hello Holberton School!
+
+curl localhost:1245/students && echo ""
+# Output:
+# This is the list of our students
+# Number of students: 10
+# Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
+# Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
+```
