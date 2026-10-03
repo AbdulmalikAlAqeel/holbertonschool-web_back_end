@@ -13,7 +13,6 @@ function countStudents(path) {
     throw new Error('Cannot load the database');
   }
 
-  // Split lines and filter out empty ones
   const lines = data.split('\n').filter((line) => line.trim() !== '');
 
   if (lines.length <= 1) {
@@ -22,7 +21,7 @@ function countStudents(path) {
   }
 
   const studentLines = lines.slice(1);
-  console.log('Number of students: ' + studentLines.length);
+  console.log(`Number of students: ${studentLines.length}`);
 
   const fields = {};
 
@@ -31,25 +30,22 @@ function countStudents(path) {
 
     if (studentData.length >= 4) {
       const firstname = studentData[0].trim();
-      const field = studentData[3].trim();
+      const fieldName = studentData[3].trim();
 
-      if (firstname && field) {
-        if (!fields[field]) {
-          fields[field] = [];
+      if (firstname && fieldName) {
+        if (!fields[fieldName]) {
+          fields[fieldName] = [];
         }
-        fields[field].push(firstname);
+        fields[fieldName].push(firstname);
       }
     }
   }
 
-  for (const field in fields) {
-    if (Object.prototype.hasOwnProperty.call(fields, field)) {
-      const count = fields[field].length;
-      const list = fields[field].join(', ');
-      
-      // Explicit string concatenation with + operator
-      console.log('Number of students in ' + field + ': ' + count + '. List: ' + list);
-    }
+  const keys = Object.keys(fields);
+  for (let i = 0; i < keys.length; i += 1) {
+    const field = keys[i];
+    const students = fields[field];
+    console.log(`Number of students in \({field}:\){students.length}. List: ${students.join(', ')}`);
   }
 }
 
