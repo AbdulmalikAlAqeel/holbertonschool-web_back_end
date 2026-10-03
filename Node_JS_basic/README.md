@@ -131,3 +131,33 @@ countStudents("database.csv")
 
 console.log("After!");
 ```
+
+---
+
+### 4. Create a small HTTP server using Node's HTTP module
+
+**File:** `4-http.js`  
+**Description:** Sets up a lightweight native Node.js HTTP server assigned to the `app` variable and exported for routing/testing purposes.
+
+#### Requirements
+- Import the native `http` module.
+- Create an HTTP server and assign it to the variable `app`.
+- Export `app` using `module.exports = app;`.
+- The HTTP server must listen on port `1245`.
+- Returns `Hello Holberton School!` in plain text format (`text/plain`) for any endpoint/path requested.
+
+#### Usage & Testing Example
+
+In **Terminal 1** (Start the server):
+```bash
+node 4-http.js
+```
+In Terminal 2 (Test endpoints via curl):
+
+```bash
+curl localhost:1245 && echo ""
+# Output: Hello Holberton School!
+
+curl localhost:1245/any_endpoint && echo ""
+# Output: Hello Holberton School!
+```
