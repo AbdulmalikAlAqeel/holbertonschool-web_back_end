@@ -198,3 +198,36 @@ curl localhost:1245/students && echo ""
 # Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
 # Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
 ```
+
+---
+
+### 6. Create a small HTTP server using Express
+
+**File:** `6-http_express.js`  
+**Description:** Replaces the native `http` server module with the `Express` framework to deliver an HTTP server listening on port `1245`.
+
+#### Requirements
+- Install and import the `express` module.
+- Create an Express application and assign it to the `app` variable.
+- Export `app` using `module.exports = app;`.
+- The server must listen on port `1245`.
+- Endpoints handling:
+  - `/`: Returns `Hello Holberton School!` in the response body.
+  - Any undefined endpoint returns the default Express 404 HTML response (`Cannot GET /endpoint`).
+
+#### Usage & Testing Example
+
+In **Terminal 1** (Start the server):
+```bash
+node 6-http_express.js
+```
+
+In Terminal 2 (Test endpoints via curl):
+
+```bash
+curl localhost:1245 && echo ""
+# Output: Hello Holberton School!
+
+curl localhost:1245/any_endpoint && echo ""
+# Output: <!DOCTYPE html>...<pre>Cannot GET /any_endpoint</pre>...
+```
